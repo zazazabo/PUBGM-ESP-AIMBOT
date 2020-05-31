@@ -127,7 +127,7 @@ namespace PUBGMESP
             int controllerOffset, posOffset, healthOffset, nameOffset, teamIDOffset, poseOffset, statusOffset;
             controllerOffset = 96;
             posOffset = 336;
-            healthOffset = 1912;
+            healthOffset = 1920;
             nameOffset = 1512;
             teamIDOffset = 1552;
             statusOffset = 868;
