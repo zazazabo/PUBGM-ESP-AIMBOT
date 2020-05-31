@@ -99,8 +99,8 @@ namespace PUBGMESP
             ueSearch = new GameMemSearch(sigScan);
             var cands = ueSearch.ViewWorldSearchCandidates();
             viewWorld = ueSearch.GetViewWorld(cands);
-            uWorld = viewWorld - 4217216;
-            gNames = viewWorld - 1638204;
+            uWorld = viewWorld - 4270704;
+            gNames = viewWorld - 1645436;
             if (uWorld > 0)
             {
                 // Start Drawing ESP
