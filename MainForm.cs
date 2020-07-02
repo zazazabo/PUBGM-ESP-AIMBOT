@@ -66,7 +66,7 @@ namespace PUBGMESP
             // Enable Debug Privilige
             EnableDebugPriv();
             // Get Window Handle
-            hwnd = FindWindow("TXGuiFoundation", "Gameloop【Turbo AOW Engine】");
+            hwnd = FindWindow("TXGuiFoundation", "Gameloop【Turbo AOW Engine-4.4】");
             Console.WriteLine(hwnd);
             if (hwnd == IntPtr.Zero)
             {
