@@ -140,7 +140,7 @@ namespace PUBGMESP
                 gameInstance = Mem.ReadMemory<int>(uWorlds + 36);
                 playerController = Mem.ReadMemory<int>(gameInstance + controllerOffset);
                 playerCarry = Mem.ReadMemory<int>(playerController + 32);
-                uMyObject = Mem.ReadMemory<int>(playerCarry + 788);
+                uMyObject = Mem.ReadMemory<int>(playerCarry + 792); //788 old value
                 //uMyself = Mem.ReadMemory<int>(uLevel + 124);
                 //uMyself = Mem.ReadMemory<int>(uMyself + 36);
                 //uMyself = Mem.ReadMemory<int>(uMyself + 312);
