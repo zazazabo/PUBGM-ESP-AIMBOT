@@ -99,8 +99,8 @@ namespace PUBGMESP
             ueSearch = new GameMemSearch(sigScan);
             var cands = ueSearch.ViewWorldSearchCandidates();
             viewWorld = ueSearch.GetViewWorld(cands);
-            uWorld = viewWorld - 4270704;
-            gNames = viewWorld - 1645436;
+            uWorld = viewWorld - 4340704;
+            gNames = viewWorld - 1658780;
             if (uWorld > 0)
             {
                 // Start Drawing ESP
@@ -127,7 +127,7 @@ namespace PUBGMESP
             int controllerOffset, posOffset, healthOffset, nameOffset, teamIDOffset, poseOffset, statusOffset;
             controllerOffset = 96;
             posOffset = 336;
-            healthOffset = 1920;
+            healthOffset = 1928;
             nameOffset = 1512;
             teamIDOffset = 1552;
             statusOffset = 868;
