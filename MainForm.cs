@@ -149,7 +149,7 @@ namespace PUBGMESP
                 //myWorld = Mem.ReadMemory<int>(uMyObject + 312);
                 //myObjectPos = Mem.ReadMemory<Vector3>(myWorld + posOffset);
                 entityEntry = Mem.ReadMemory<int>(uLevel + 112);
-                entityCount = Mem.ReadMemory<int>(uLevel + 116);
+                entityCount = Mem.ReadMemory<int>(uLevel + 120); //116 old value
                 // Initilize Display Data
                 DisplayData data = new DisplayData(viewWorld, uMyObject);
                 List<PlayerData> playerList = new List<PlayerData>();
