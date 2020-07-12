@@ -179,7 +179,7 @@ namespace PUBGMESP
                             //int isTeam = Mem.ReadMemory<int>(Mem.ReadMemory<int>(Mem.ReadMemory<int>(entityAddv + 724 + 4)) + 20);
                             //if (isTeam > 0)
                             //    continue;
-                            Mem.WriteMemory<int>(Mem.ReadMemory<int>(uMyObject + 2656) + 352, 300000);
+                            // Mem.WriteMemory<int>(Mem.ReadMemory<int>(uMyObject + 2656) + 352, 300000);
 
                             string name = Encoding.Unicode.GetString(Mem.ReadMemory(Mem.ReadMemory<int>(entityAddv + nameOffset), 32));
                             name = name.Substring(0, name.IndexOf('\0'));
