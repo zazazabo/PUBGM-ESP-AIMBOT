@@ -12,6 +12,8 @@ Features:
 - Grenade Alert
 - Player Health/Name/Distance/Line
 - Simple Aimbot
+- Enemy State
+- Enemy Weapon
 
 # References :-
 - Google.
