@@ -175,11 +175,25 @@ namespace PUBGMESP
   
                             if (status == 6)
                                 continue;
-                            // my team player continue
-                            //int isTeam = Mem.ReadMemory<int>(Mem.ReadMemory<int>(Mem.ReadMemory<int>(entityAddv + 724 + 4)) + 20);
-                            //if (isTeam > 0)
-                            //    continue;
-                            // Mem.WriteMemory<int>(Mem.ReadMemory<int>(uMyObject + 2656) + 352, 300000);
+                                
+                            // Enemy weapon
+                            var enemy_weapon = GameData.GetEntityType(gNames, Mem.ReadMemory(Mem.ReadMemory(entityAddv + 5124) + 16));
+                            if (string.IsNullOrEmpty(enemy_weapon))
+                                enemy_weapon = "Fist";
+                            else
+                            {
+                                try
+                                {
+                                    var enemy_weaponList = enemy_weapon.Split('_').ToList();
+                                    enemy_weapon = enemy_weaponList[2];
+                                }
+                                catch
+                                {
+                                    enemy_weapon = "Unknown";
+                                }
+
+                            }
+                            Console.WriteLine(enemy_weapon);
 
                             string name = Encoding.Unicode.GetString(Mem.ReadMemory(Mem.ReadMemory<int>(entityAddv + nameOffset), 32));
                             name = name.Substring(0, name.IndexOf('\0'));
