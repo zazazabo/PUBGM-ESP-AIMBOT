@@ -620,7 +620,7 @@ namespace PUBGMESP
             return Vehicle.Unknown;
         }
         
-        public string GetEnemyState(PlayerData player)
+        public static string GetEnemyState(PlayerData player)
         {
             var state = Mem.ReadMemory<int>(player.Address + 1920);
 
