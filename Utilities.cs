@@ -619,7 +619,87 @@ namespace PUBGMESP
             //}
             return Vehicle.Unknown;
         }
+        
+        public string GetEnemyState(PlayerData player)
+        {
+            var state = Mem.ReadMemory<int>(player.Address + 1920);
 
+            switch (state)
+            {
+            case 8:
+            return "Stand";
+            case 9:
+            return "Walking";
+            case 11:
+            return "Running";
+            case 16:
+            case 17:
+            case 19:
+            return "Crouch";
+            case 32:
+            case 33:
+            case 35:
+            return "Snake";
+            // Standing Jump
+            case 72:
+            case 73:
+            case 75:
+            return "Jumping";
+            case 264:
+            case 272:
+            case 273:
+            case 288:
+            case 265:
+            case 329:
+            return "Reloading";
+            case 137:
+            case 144:
+            case 145:
+            case 160:
+            case 649:
+            case 1160:
+            case 1161:
+            case 1169:
+            return "Firing";
+            case 4194304:
+            return "Swimming";
+            case 131070:
+            case 131071:
+            case 131072:
+            case 131073:
+            case 131074:
+            case 131075:
+            return "Knocked";
+            // In Plane
+            case 33554440:
+            case 524296:
+            case 1048584:
+            return "Driving";
+
+            case 32784:
+            return "Reviving";
+
+            case 16392:
+            case 16393:
+            case 16401:
+            case 16416:
+            case 16417:
+            case 16457:
+            case 16400:
+            case 17401:
+            case 17417:
+            case 17424:
+            case 17425:
+            return "Throwing Bomb";
+            case 16777224:
+            return "Climbing";
+
+            case 8200:
+            return "Punching";
+            }
+
+            return string.Empty;
+        }
         /// <summary>
         /// Get Item's Type
         /// </summary>
