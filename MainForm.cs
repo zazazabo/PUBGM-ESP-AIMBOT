@@ -177,7 +177,7 @@ namespace PUBGMESP
                                 continue;
                                 
                             // Enemy weapon
-                            var enemy_weapon = GameData.GetEntityType(gNames, Mem.ReadMemory(Mem.ReadMemory(entityAddv + 5124) + 16));
+                            var enemy_weapon = GameData.GetEntityType(gNames, Mem.ReadMemory<int>(Mem.ReadMemory<int>(entityAddv + 5124) + 16));
                             if (string.IsNullOrEmpty(enemy_weapon))
                                 enemy_weapon = "Fist";
                             else
